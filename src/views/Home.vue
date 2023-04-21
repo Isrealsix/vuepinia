@@ -22,7 +22,7 @@ const oddOrEven = computed(() => {
 
 <template>
 	<div class="home">
-		<div class="count">{{ count }}</div>
+		<div class="count">{{ storeCounter.count }}</div>
 		<div class="buttons">
 			<button @click="increaseCount">+</button>
 			<button @click="decreaseCount">-</button>
