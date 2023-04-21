@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCounterStore } from '../stores/counter';
+import Counter from '../components/Counter.vue';
 
 const storeCounter = useCounterStore();
 </script>
@@ -7,17 +8,14 @@ const storeCounter = useCounterStore();
 <template>
 	<div class="home">
 		<div class="count">{{ storeCounter.count }}</div>
-		<div class="buttons">
-			<button @click="storeCounter.increaseCount">+</button>
-			<button @click="storeCounter.decreaseCount">-</button>
-		</div>
+		<Counter />
 		<hr />
 		<div>This counter is: {{ storeCounter.oddOrEven }}</div>
 	</div>
 	<hr />
 	<div>
 		<h3>Edit counter:</h3>
-		<input type="number" v-model="storeCounter.count">
+		<input type="number" v-model="storeCounter.count" />
 	</div>
 </template>
 
