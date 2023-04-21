@@ -1,23 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
 import { useCounterStore } from '../stores/counter';
 
 const storeCounter = useCounterStore();
-const count = ref(0);
-
-const increaseCount = () => {
-	++count.value;
-};
-
-const decreaseCount = () => {
-	if (count.value <= 0) return;
-	--count.value;
-};
-
-const oddOrEven = computed(() => {
-	if (count.value % 2 === 0) return 'even';
-	return 'odd';
-});
 </script>
 
 <template>
