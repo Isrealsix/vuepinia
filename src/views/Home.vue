@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
+import { useCounterStore } from '../stores/counter';
 
+const storeCounter = useCounterStore()
 const count = ref(0);
 
 const increaseCount = () => {
