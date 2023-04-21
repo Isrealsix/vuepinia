@@ -28,7 +28,7 @@ const oddOrEven = computed(() => {
 			<button @click="storeCounter.decreaseCount">-</button>
 		</div>
 		<br />
-		<div>This counter is: {{ oddOrEven }}</div>
+		<div>This counter is: {{ storeCounter.oddOrEven }}</div>
 	</div>
 </template>
 
