@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue';
 import { useCounterStore } from '../stores/counter';
 
-const storeCounter = useCounterStore()
+const storeCounter = useCounterStore();
 const count = ref(0);
 
 const increaseCount = () => {
@@ -24,8 +24,8 @@ const oddOrEven = computed(() => {
 	<div class="home">
 		<div class="count">{{ storeCounter.count }}</div>
 		<div class="buttons">
-			<button @click="increaseCount">+</button>
-			<button @click="decreaseCount">-</button>
+			<button @click="storeCounter.increaseCount">+</button>
+			<button @click="storeCounter.decreaseCount">-</button>
 		</div>
 		<br />
 		<div>This counter is: {{ oddOrEven }}</div>
