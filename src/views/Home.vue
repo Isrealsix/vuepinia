@@ -11,8 +11,13 @@ const storeCounter = useCounterStore();
 			<button @click="storeCounter.increaseCount">+</button>
 			<button @click="storeCounter.decreaseCount">-</button>
 		</div>
-		<br />
+		<hr />
 		<div>This counter is: {{ storeCounter.oddOrEven }}</div>
+	</div>
+	<hr />
+	<div>
+		<h3>Edit counter:</h3>
+		<input type="number" v-model="storeCounter.count">
 	</div>
 </template>
 
