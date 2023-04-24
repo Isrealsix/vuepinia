@@ -1,6 +1,11 @@
 import { defineStore } from 'pinia';
 
+interface IState {
+	count: number
+}
+
 export const useCounterStore = defineStore({
+	persist: true,
 	id: 'counter',
 	state: () => ({
 		count: 0
